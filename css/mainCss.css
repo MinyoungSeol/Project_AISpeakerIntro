@@ -1,0 +1,156 @@
+﻿@charset "utf-8";
+
+/*기본 CSS(모바일) */
+
+  /*헤더 영역*/
+  .header .toggleBtn { display:inline-block; float:right; color:#fff; font-size:30px; padding:20px; cursor:pointer; }
+  .header img.logo { width:150px; display:inline-block; padding:26px; float:left; }
+
+  .header { width:100%; height:80px; background:#303749; position:fixed; z-index:999; }
+  .gnb { background:#303749; width:100%; margin:0 auto; position:absolute; top:100%; display:none;
+           box-shadow:0 5px 15px rgba(0,0,0,0.3); z-index:10; }
+  .gnb li { width:100%; text-align:center; line-height:80px; }
+  /*.gnb li:not(:last-child) { border-bottom:1px solid #738e5a; }*/
+  .gnb li a { color:#fff; font-weight:bold; font-size:20px; width:100%; display:block; }
+  .gnb li a:hover { color:#aaee47; }
+  .gnb li.gnbLogo { display:none; }
+  .gnbLogo img {}
+
+  /*슬라이드 영역*/
+  .slideSection { width:100%; position:relative; padding-top:80px; }
+  .slideWrap { width:100%; overflow:hidden; }
+  .slideWrap::after { content:""; clear:both; display:block; }
+  .slideView { position:relative; }
+  .slide { }
+  .slide li { float:left; }
+  .slide li img { float:left; }
+
+  button { position:absolute; top:50%; border:none; outline:none; padding:16px 8px; 
+               background:#303749; color:#fff; font-family: 'Nanum Gothic', sans-serif; font-size:20px; 
+               cursor:pointer; }
+  button:hover { background:#fff; color:#303749; }
+  .slideLeft { left:20px; }
+  .slideRight { right:20px; }
+
+  .slideBtn { width:200px; height:35px; background:#303749; position:absolute; top:100%; left:50%; 
+                  transform:translateX(-50%); border-radius:0px 0px 200px 200px; text-align:center; }
+  .slideBtn li { display:inline-block; background:#fff; width:15px; height:15px; 
+                     margin:10px 8px 8px; border-radius:50%; cursor:pointer; }
+
+  /*광고 영상 영역*/
+
+  .whiteClova { width:50px; display:block; padding:50px 0 0; margin:0 auto; }
+
+  .ads { clear:both; width:100%; background:#505568; padding-bottom:60px; }
+  .ads h1 { text-align:center; color:#fff; padding:30px 0 30px; }
+  .ads h1 span { font-size:35px; }
+  .ads .videoWrap { width:90%; margin:0 auto; text-align:center; }
+  .ads::after { content:""; display:block; clear:both; }
+  .ads .videoWrap img { display:block; width:100%; margin:30px 0; cursor:pointer; }
+
+
+  /* 모달 영역 */
+  .adModal { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:99999; display:none; }
+  .adModal div { position:relative; width:100%; margin:200px auto; }
+  .adModal h2 { color:#f1f1f1; padding:20px; }
+  .adModal iframe { width:100%; }
+  .adModal span { float:right; padding:20px; font-size:20px; color:#f1f1f1; cursor:pointer; transition:all 0.2s; }
+  .adModal span:hover { color:#aaee74; }
+
+  /* 물어봐 영역 */
+  .ask { width:100%; background:#b3ce97; height:550px; position:relative; padding-top:60px; }
+  .askTXT { text-align:center; padding-bottom:50px; }
+  .askTXT p.thisWeek { display:inline-block; font-size:20px; color:gray; font-weight:600; }
+  .askTXT img { vertical-align:middle; width:110px; display:inline-block; }
+  .askTXT h1 { padding:20px 0; font-size:40px; color:#303749; }
+  .askTXT p.heyclova { padding:20px 0; font-size:18px; font-weight:600; }
+  .heyclova span { font-size:14px; color:gray; padding-top:15px; display:block; }
+  img.memoPad { width:95%; max-width:1000px; bottom:0; left:50%; position:absolute; transform:translateX(-50%); }
+
+  .memo { width:100%; position:absolute; bottom:0; }
+  .memoTXT { position:relative; padding:5%; }
+  .memoTXT h2 { line-height:2; text-align:center; font-size:20px; color:#303749; }
+
+  /* 푸터 영역 */
+  .footer { width:100%; background:#555; text-align:center; padding-bottom:30px; }
+  .footerLinks { text-align:center; padding:30px 0; border-bottom:1px solid gray; width:95%; margin:0 auto; }
+  .footerLinks::after { content:""; display:block; clear:both; }
+  .footerLinks a {}
+  .footerLinks img { width:23%; margin:1%; display:inline-block; transition:all 0.3s; }
+  .footerLinks img:last-of-type { width:25%; margin:2.5%; }
+  .footerLinks a img:hover { opacity:0.6; }
+  .footer>a { color:gray; }
+  .footer>a span { display:inline-block; padding:25px 0 8px; }
+  .footer>p { font-size:14px; color:gray; }
+
+  ::selection { background:green; color:#fff; }
+
+
+
+/* 태블릿 CSS */
+@media screen and (min-width:650px) {
+
+  /*광고 영상 영역*/
+  .ads .videoWrap img { width:45%; display:inline-block; margin:1%; }
+
+  /* 물어봐 영역 */
+  .ask { height:700px; }
+  .memo { padding:2%; }
+  .memo h2 { font-size:26px; }
+
+  /* 푸터 영역 */
+  .footerLinks { padding:15px 0;  }
+  .footerLinks img { width:20%!important; }
+
+}
+
+
+
+/* PC CSS */
+@media screen and (min-width:1100px) {
+
+  /*헤더 영역*/
+
+  .header .toggleBtn { display:none; float:right; color:#fff; font-size:30px; padding:20px; cursor:pointer; }
+  .header img.logo { width:150px; display:none; padding:26px; float:none; }
+
+  .header { width:100%; height:100px; background:#303749; position:fixed; z-index:999; }
+  .gnb { background:#303749; width:100%; margin:0 auto; position:absolute; top:50%; display:inline-block!important;
+           box-shadow:none; z-index:10; transform:translateY(-50%); }
+  .gnb li { width:20%; text-align:center; line-height:none; float:left; }
+  /*.gnb li:not(:last-child) { border-bottom:1px solid #738e5a; }*/
+  .gnb li a { color:#fff; font-weight:bold; font-size:18px; display:inline; transition:all 0.3s; padding:50px; }
+  .gnb li a:hover { color:#aaee47; }
+  .gnb li.gnbLogo { display:inline; }
+  .gnbLogo img { width:80%; vertical-align:middle; max-width:170px; }
+
+  /* 슬라이드 영역 */
+  .slide { padding-top:20px; }
+  button { padding:32px 16px;  }
+
+  /* 모달 영역 */
+  .adModal { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:99999; display:none; }
+  .adModal div { position:relative; width:80%; margin:200px auto; max-width:1200px; }
+  .adModal h2 { color:#f1f1f1; padding:20px; }
+  .adModal iframe { width:100%; }
+  .adModal span { float:right; padding:20px; font-size:20px; color:#f1f1f1; cursor:pointer; transition:all 0.2s; }
+
+  /* 물어봐 영역 */
+  .ask { height:750px; }
+  .askTXT { text-align:center; padding-bottom:50px; }
+  .askTXT p.thisWeek { display:inline-block; font-size:30px; color:gray; font-weight:600; }
+  .askTXT img { vertical-align:middle; width:110px; display:inline-block; }
+  .askTXT h1 { padding:20px 0; font-size:50px; color:#303749; }
+  .askTXT p.heyclova { padding:20px 0; font-size:24px; font-weight:600; }
+  .heyclova span { font-size:14px; color:gray; padding-top:20px; display:block; }
+
+  .memo { width:100%; position:absolute; bottom:0; }
+  .memoTXT { position:relative; padding:1%; }
+  .memoTXT h2 { line-height:2; text-align:center; font-size:30px;  }
+
+  /* 푸터 영역 */
+  .footerLinks { padding:5px 0;  }
+  .footerLinks img { width:10%!important; }
+
+}
+

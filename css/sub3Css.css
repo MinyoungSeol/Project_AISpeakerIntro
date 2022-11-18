@@ -1,0 +1,149 @@
+﻿@charset "utf-8";
+
+  body { background:#f1f1f1; }
+
+/*기본 CSS(모바일) */
+
+  /*헤더 영역*/
+  .header .toggleBtn { display:inline-block; float:right; color:#fff; font-size:30px; padding:20px; cursor:pointer; }
+  .header img.logo { width:150px; display:inline-block; padding:26px; float:left; }
+
+  .header { width:100%; height:80px; background:#303749; position:fixed; z-index:999; }
+  .gnb { background:#303749; width:100%; margin:0 auto; position:absolute; top:100%; display:none;
+           box-shadow:0 5px 15px rgba(0,0,0,0.3); z-index:10; }
+  .gnb li { width:100%; text-align:center; line-height:80px; }
+  /*.gnb li:not(:last-child) { border-bottom:1px solid #738e5a; }*/
+  .gnb li a { color:#fff; font-weight:bold; font-size:20px; width:100%; display:block; }
+  .gnb li a:hover { color:#aaee47; }
+  .gnb li.gnbLogo { display:none; }
+  .gnbLogo img {}
+
+  /* 상단 바 영역 */
+  .upperBar { padding:130px 0px 150px; width:100%; margin:0 auto; max-width:1100px; }
+  .upperBar li { float:left; width:25%; text-align:center; padding:30px 0; font-size:1.2em; cursor:pointer; 
+                 border-bottom:2px solid #ccc; color:#ddd; }
+  .upperBar li:nth-of-type(1) { font-weight:bolder; border-bottom:5px solid #303749; color:#555; margin-left:25% }
+
+
+/* 검색 바 영역 */
+.searchBarArea { width:100%; max-width:1100px; margin:0 auto; }
+.searchBarBox { width:75%; margin:0 auto; }
+.searchBarArea::after { content:""; display:block; clear:both; }
+.searchBarBox::after { content:""; display:block; clear:both; }
+
+.select { width:30%; max-width:150px; float:left; }
+.select select { padding:15px 16px; width:100%; font-size:13px; text-align:center; border:none; 
+                       background:#303739; color:#fff; font-weight:600;  cursor:pointer; outline:none; 
+                       font-family: 'Nanum Gothic', sans-serif;}
+.select select option { background:#303749; color:#fff; }
+
+.searchBar { }
+.searchBar form {}
+.searchBar form input {float:left; display:block; padding:16px 15px; border:none; width:60%; 
+                                box-sizing:border-box; font-family: 'Nanum Gothic', sans-serif; }
+.searchBar form button {float:left; display:block; padding:16px; border:none; width:10%; box-sizing:border-box;
+                                   background:#303749; color:#aaee39; outline:none; cursor:pointer; }
+
+/*콘텐츠 영역*/
+.content { width:100%; max-width:1100px; margin:30px auto; }
+.content h2 { text-align:center; padding:40px 0;  font-size:20px; color:#999; }
+.content h2 i { font-size:33px; margin-right:8px; color:#aaee47; }
+.content a { display:block; text-align:center; margin:50px auto; color:gray; font-weight:900; 
+                  width:150px; }
+
+.accordianBox { width:100%; }
+.accordianBox .accordian { width:100%; display:block; padding:15px 7px; font-size:15px; text-align:left;
+                                     border:none; outline:none; background:#fff; border-bottom:1px solid #eee; 
+                                     cursor:pointer; position:relative; overflow:hidden;
+                                     font-family: 'Nanum Gothic', sans-serif; }
+.accordian:nth-of-type(1) { border-top:4px solid #303749; }
+.accordian i.fa-user { color:#c3cdd7; font-size:40px; position:absolute; bottom:-3%; }
+.accordian span.q { padding-left:50px; font-size:25px; font-weight:900; color:#465360; }
+.accordian span.title { padding-left:10px; font-weight:600; }
+.accordian i.fa-plus { position:absolute; font-size:20px; padding-right:10px; right:10px; top:50%;
+                              transform:translateY(-50%); }
+.panel { width:100%; padding:20px 15px; background:#fff; font-size:14px; display:none; }
+.panel p { color:#303749; }
+
+.brownAndSally { width:100%; max-width:1100px; margin:0 auto; position:relative; bottom:-150px; }
+.brownAndSally img { position:absolute; z-index:-90; width:200px; }
+.brown { bottom:-35px; left:27px; transform:rotate(15deg); }
+.sally { bottom:-35px; right:27px; transform:rotate(-15deg); }
+
+
+
+  /* 푸터 영역 */
+  .topBtn { position:absolute; display:block; padding:15px; left:50%; 
+               transform:translateX(-50%); bottom:100%; background:#303749; font-weight:600; }
+
+  .footer { width:100%; background:#555; text-align:center; padding-bottom:30px; clear:both; position:relative; 
+               margin-top:150px; }
+  .footerLinks { text-align:center; padding:30px 0; border-bottom:1px solid gray; width:95%; margin:0 auto; }
+  .footerLinks::after { content:""; display:block; clear:both; }
+  .footerLinks a {}
+  .footerLinks img { width:23%; margin:1%; display:inline-block; transition:all 0.3s; }
+  .footerLinks img:last-of-type { width:25%; margin:2.5%; }
+  .footerLinks a img:hover { opacity:0.6; }
+  .footer>a { color:gray; }
+  .footer>a span { display:inline-block; padding:25px 0 8px; }
+  .footer>p { font-size:14px; color:gray; }
+
+  ::selection { background:green; color:#fff; }
+
+
+
+/* 태블릿 CSS */
+@media screen and (min-width:650px) {
+
+/*상단 바 영역*/
+  .upperBar li { font-size:18px; }
+
+/* 콘텐츠 영역 */
+.accordian span.q { padding-left:70px; }
+.accordian span.title { font-size:18px; }
+.panel { font-size:18px; }
+
+
+  /* 푸터 영역 */
+  .footerLinks { padding:15px 0;  }
+  .footerLinks img { width:20%!important; }
+
+
+}
+
+
+
+/* PC CSS */
+@media screen and (min-width:1100px) {
+
+  /*헤더 영역*/
+
+  .header .toggleBtn { display:none; float:right; color:#fff; font-size:30px; padding:20px; cursor:pointer; }
+  .header img.logo { width:150px; display:none; padding:26px; float:none; }
+
+  .header { width:100%; height:100px; background:#303749; position:fixed; z-index:999; }
+  .gnb { background:#303749; width:100%; margin:0 auto; position:absolute; top:50%; display:inline-block!important;
+           box-shadow:none; z-index:10; transform:translateY(-50%); }
+  .gnb li { width:20%; text-align:center; line-height:none; float:left; }
+  /*.gnb li:not(:last-child) { border-bottom:1px solid #738e5a; }*/
+  .gnb li a { color:#fff; font-weight:bold; font-size:18px; display:inline; transition:all 0.3s; padding:50px; }
+  .gnb li a:hover { color:#aaee47; }
+  .gnb li.gnbLogo { display:inline; }
+  .gnbLogo img { width:80%; vertical-align:middle; max-width:170px; }
+
+  /* 상단 바 영역 */
+  .upperBar li {  font-size:22px; }
+
+/* 콘텐츠 영역 */
+.accordian i.fa-user { bottom:-3%; left:50px; }
+.accordian span.q { padding-left:130px; }
+.accordian span.title { font-size:18px; padding-left:40px; }
+.panel { font-size:19px; padding:20px 40px 20px 210px; }
+
+
+  /* 푸터 영역 */
+  .footerLinks { padding:5px 0;  }
+  .footerLinks img { width:10%!important; }
+
+}
+
